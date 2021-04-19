@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+
+<!--The animation properties control how the animation should behave and the @keyframes rule controls what happens during that animation. There are eight animation properties in total.-->
+
+<html>
+<head>
+<title>Keyframes</title>
+    <style>
+    div {
+        height: 40px;
+        width: 70%;
+        background: black;
+        margin: 50px auto;
+        border-radius: 5px;
+        }
+    #rect {
+        /*animation-name sets the name of the animation, which is later used by @keyframes to tell CSS which rules go with which animations.*/
+        /*animation-duration sets the length of time for the animation.*/
+        animation-name: rainbow;
+        animation-duration: 4s;
+        }
+            /*@keyframes is how to specify exactly what happens within the animation over the duration. This is done by giving CSS properties for specific "frames" during the animation, with percentages ranging from 0% to 100%. */
+            @keyframes rainbow {
+              0% {
+                background-color: blue;
+              }
+              50%{
+                background-color: green;
+              }
+              100% {
+                background-color: yellow;
+              }
+            }
+            /*You aren't limited to only beginning-end transitions, you can set properties for the element for any percentage between 0% and 100%.*/        
+      button {
+        border-radius: 5px;
+        color: white;
+        background-color: #0F5897;
+        padding: 5px 10px 8px 10px;
+        cursor: pointer;
+      }
+      button:hover {
+        animation-name: background-color;
+        animation-duration: 500ms; /*ms stands for milliseconds, where 1000ms is equal to 1s.*/
+        /*The animation-fill-mode specifies the style applied to an element when the animation has finished.*/
+        animation-fill-mode: forwards; /*Forwards makes the button stay highlighted.*/
+      }
+      @keyframes background-color{
+        100%{
+          background-color:#4791d0;
+        }
+          /*the button changes color when a user hovers over it.*/
+      }
+    </style>
+</head>
+<body>
+    <div id="rect"></div>
+    <button>Register</button>
+</body>
+</html>

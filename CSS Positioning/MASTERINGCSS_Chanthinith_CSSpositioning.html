@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<!--Make a face. Also Add a sticky footer: Create a footer that will stick to the bottom of the page that has your contact information inside it.-->
+<head>
+<meta charset="UTF-8">
+<title>Face - CSS Positioning</title>
+    <style>
+        #face{
+            background-color: tan;
+            height: 500px;
+            width:350px;
+            border-radius: 50px;
+            position: static;
+            z-index: -1;
+        }
+        #LEye{
+            background-color:whitesmoke;
+            width: 125px;
+            height: 100px;
+            position: relative;
+            top: 100px;
+            left: 30px;
+            border-radius: 60px;  
+        }
+        #REye{
+            background-color:whitesmoke;
+            width: 125px;
+            height: 100px;
+            position: absolute;
+            top: 110px;
+            left: 200px;
+            border-radius: 60px;  
+        }
+        #nose{
+            background-color:sandybrown;
+            width: 100px;
+            height: 175px;
+            position: absolute;
+            top: 215px;
+            left: 135px;
+            border-radius: 40px;    
+        }
+        #mouth{
+            background-color:lightpink;
+            width: 300px;
+            height: 35px;
+            position: relative;
+            top: 300px;
+            left: 25px;
+            border-radius: 60px;  
+        }
+        footer{
+            background-color: brown;
+            color: tan;
+            width: 200px;
+            position: fixed;
+            bottom: 0px;
+            right: 0px;
+            padding: 10px;
+            line-height: 25px;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+<div id="face">
+ <div id="LEye"></div>
+ <div id="REye"></div>
+ <div id="nose"></div>
+ <div id="mouth"></div>
+</div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eros felis, vestibulum non bibendum non, molestie eu neque. Aenean ac ligula et lacus iaculis sodales et eu arcu. Sed aliquet odio sem, nec tempus sapien ultricies non. Vestibulum pellentesque feugiat urna, in iaculis nisl interdum quis. Morbi id sem ac nunc lacinia pretium et quis sem. Pellentesque lacinia gravida egestas. Aenean imperdiet nisi non risus egestas tempus. Etiam odio massa, tristique eget nibh nec, dictum tempor orci. Sed ut consequat ante.</p>
+
+    <p>Ut et vestibulum neque. Nullam tincidunt porta massa, a sollicitudin mauris laoreet ac. Maecenas pellentesque ut nulla quis faucibus. Cras hendrerit nibh id tristique varius. Curabitur sagittis tellus quam. Curabitur a volutpat nibh. Aliquam non felis quis tellus interdum sodales ultrices ut urna. Mauris vehicula finibus vehicula. Integer volutpat dui quis ante congue tempor. Curabitur vel ex maximus, laoreet ligula nec, porta libero. Donec arcu nisl, euismod quis varius id, eleifend iaculis magna. Praesent ut odio eu ipsum efficitur mattis. Cras justo lorem, aliquam porttitor tempus quis, sagittis ac odio.</p>
+
+<footer>
+<strong>CONTACT</strong><br>
+Alexis C.<br>
+Main St, Cityville, U.S.A.<br>
+email@email.com<br>
+(xxx)xxx-5000</footer>
+    
+</body>
+<html>

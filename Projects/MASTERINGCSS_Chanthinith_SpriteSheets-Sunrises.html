@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<!--using just some divs, make a sunrise.
+• Take a div and color it blue for the sky. Let’s say
+500px by 500px.
+• Turn a div into a circle, using border-radius and
+color it yellow for the sun.
+• Make sure the sky has position: relative
+and the sun has position: absolute so that
+you can move the sun around the sky.
+• Make keyframes that move the sun across the sky.
+• Remember to use z-index, so the sun stays in
+front of the sky.
+• For an added challenge, add a div for the ground
+that the sun starts behind, and then rises into the
+sky and settles back down behind the ground.
+• Next challenge, change the sun’s color, so it starts
+red, and when it’s up in the sky, it then turns yellow
+and when it settles back down turns red again.
+Start with creating the div and step through the frames. As you type the rules, check the browser often. -->
+
+<html>
+
+<head>
+    <title>Sunrises</title>
+    <style>
+        #sky {
+            width: 500px;
+            height: 500px;
+            background-color: skyblue;
+            position: relative;
+            animation: sky 10s infinite;
+        }
+        @keyframes sky {
+            0% {
+                background-color: midnightblue;
+            }
+            50% {
+                background-color: skyblue;
+            }
+            100% {
+                background-color: midnightblue;
+            }
+            
+        }
+        #sun{
+            width: 100px;
+            height: 100px;
+            border-radius: 50px;
+            position: absolute;
+            background-color: yellow;
+            left: 200px;
+            z-index: 1;
+            animation: sunrise 10s infinite;
+        }
+            @keyframes sunrise {
+                0% {
+                    top: 500px;
+                    background-color: red;
+                }
+                50% {
+                    top: 100px;
+                    background-color: yellow;
+                }
+                100% {
+                    top: 500px;
+                    background-color: red;
+                }
+            }
+        #ground{
+            width: 500px;
+            height: 125px;
+            background-color:lawngreen;
+            position: relative;
+            border-top: dotted 3px green;
+            top:500px;
+            z-index: 2;
+            animation: grass 10s infinite;
+        }
+            @keyframes grass {
+                0% {
+                    background-color: darkgreen;
+                }
+                50% {
+                    background-color: lawngreen;
+                }
+                100% {
+                    background-color: darkgreen;
+                }
+            }
+    </style>
+</head>
+
+<body>
+    <div id="sky">
+     <div id="sun"></div>
+     <div id="ground"></div>
+    </div>
+</body>
+
+</html>

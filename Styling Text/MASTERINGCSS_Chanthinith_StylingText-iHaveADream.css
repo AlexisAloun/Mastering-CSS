@@ -1,0 +1,30 @@
+body{
+    background-color: antiquewhite;
+}
+h1 {
+ color: darkred;
+ text-align: center;
+ text-transform: uppercase;
+ text-decoration: underline overline;
+ letter-spacing: 6px;
+ text-shadow: 1.5px 1.5px gray;
+ font-family: Georgia;
+ font-weight: bold;
+ font-style:normal;
+ font-size: 2.5em;
+}
+p{
+ text-indent: 40px;
+ line-height: 1.5em;
+ word-spacing: 1.5px;
+ font-size: 14pt;
+ margin-right: 10px;
+ font-family: TimesNewRoman;
+}
+img {
+ float: right;
+ margin-left: 10px;
+ visibility: visible;
+ border: 2.5px darkred solid;
+ width: 65%;
+}

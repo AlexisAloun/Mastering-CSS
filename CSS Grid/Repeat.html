@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+<!-- Let's say you want a grid with 100 rows of the same height. It isn't very practical to insert 100 values individually. Using the repeat function, you can specify the number of times you want your column or row to be repeated, followed by a comma and the value you want to repeat.
+
+This example creates create the 100 row grid, each row at 50px tall:
+    grid-template-rows: repeat(100, 50px);
+
+You can also repeat multiple values with the repeat function and insert the function amongst other values when defining a grid structure like this:
+    grid-template-columns: repeat(2, 1fr 50px) 20px;
+    which is the same as:
+        grid-template-columns: 1fr 50px 1fr 50px 20px;
+-->
+<head>
+    <title>Reduce Repetition Using the repeat Function</title>
+    <style>
+      .item1{background:LightSkyBlue;}
+      .item2{background:LightSalmon;}
+      .item3{background:PaleTurquoise;}
+      .item4{background:LightPink;}
+      .item5{background:PaleGreen;}
+      .container {
+            font-size: 40px;
+            min-height: 300px;
+            width: 100%;
+            background: LightGray;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* grid-template-columns property is set to repeat 3 columns with the width of 1fr. */
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-gap: 10px;
+      }
+    </style>
+</head>
+<body>
+    <div class="container">
+      <div class="item1">1</div>
+      <div class="item2">2</div>
+      <div class="item3">3</div>
+      <div class="item4">4</div>
+      <div class="item5">5</div>
+    </div>
+</body>
+</html>

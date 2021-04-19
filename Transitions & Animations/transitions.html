@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!-- Transformations allow us to change the scale, skew, or rotation of objects within a page. -->
+<html>
+    
+<head>
+ <title>Transitions</title>
+     <link href="reset.css" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Raleway:200" rel="stylesheet">
+         <style> /*CSS*/
+             #container {
+                 font-family: 'Raleway', sans-serif;
+                 background-color: #fafafa;
+             }
+             header, #thumbs {
+                 background-color: beige;
+                 width: 96%;
+                 margin: 0 auto;
+                 box-shadow: 2px 2px #eee;
+                 text-align: center;
+             }
+             header p {
+                 color: red;
+                 padding-top: 10px;
+                 margin-bottom: 10px;
+             }
+             header h1 {
+                 font-size: 3em;
+             }
+             header h2 {
+                 font-size: 2em;
+                 padding-bottom: 10px
+             }
+             #feature {
+                 text-align: center;
+             }
+             #feature img {
+                 width: 70%;
+                 margin-top: 20px;
+                 margin-bottom: 10px
+             }
+             /*instead of calling out each margin side separately we can use a shorthand to address each side with a single CSS rule. The generic form is margin: [top] [right] [bottom] [left];. In actual use, the rule would be formatted like this: margin: 10px 20px 10px 20px. There is also a second short cut s a second short cut style: margin: [top&bottom] [left&right]; which, in actual use, would look like this: margin: 10px 20px; .*/
+             #thumbs img {
+                 width: 20%;
+                 margin-right: 20px;
+                 margin-left: 20px;
+                 margin-bottom: 10px;
+                 margin-top: 10px;
+                 opacity: 0.35; /*Transparency between 0 and 1: For the opacity value, a value of 1.0 is entirely opaque; you can’t see through it. A value of 0 is altogether transparent*/
+                 box-shadow: 2px 2px #ccc;
+             }
+             /*The opacity rule is where we see our first CSS transition. The transition occurs when a user hovers their mouse above a thumbnail.*/
+             #thumbs img:hover {
+                 opacity: 1.0;
+                 transition: opacity 1s; /*transitioning the opacity difference in the CSS rules over a one second period*/
+                 transition-delay: .25s; /* delay the effect for quarter of a second before it begins:*/
+                 transform: rotate(5deg) scale(1.5, 1.5); /*Can rotate between 0 and 360 d3egrees and can scale the width and height*/
+             }
+         </style>
+     <script> /*JavaScript*/
+         /*Creating an array of images when the document loads*//*The window.onload function is called after the entire document is loaded and the screen is drawn.*/
+         window.onload = function () {
+             const images = document.getElementsByTagName("img");
+             /*Go thru the array w/ the for loop one by one and add an event listener to each image that'll listen for a click. the click listener responds to the function*/
+             for (var x = 1; x < images.length; x++) {
+                 images[x].addEventListener('click', function () {
+                     let loc = this.src;
+                     /*lets the location be this src*/
+                     document.getElementById('featureImage').src=loc;
+                 });
+             }
+         }
+     </script>
+</head>
+    
+<body>
+ <div id="container">
+     <header>
+         <!-- Property location information-->
+         <p>For Sale</p>
+         <h1>129 Maple Ave South</h1>
+         <h2>Westport, CT 06880</h2>
+         <h2>$699,000</h2>
+     </header>
+     
+     <div id="feature">
+         <img id="featureImage" src="MainCat.jpg">
+     </div>
+     
+     <div id="thumbs">
+         <img src="" alt="">
+         <img src="http://placekitten.com/250/250">
+         <img src="http://placekitten.com/250/250">
+         <img src="http://placekitten.com/250/250">
+         <img src="cat.jpg">
+         <img src="http://placekitten.com/250/250">
+         <img src="http://placekitten.com/250/250">
+         <img src="http://placekitten.com/250/250">
+         <img src="http://placekitten.com/250/250">
+         <img src="http://placekitten.com/250/250">
+         <img src="http://placekitten.com/250/250">
+         <img src="http://placekitten.com/250/250">
+     </div>
+     
+ </div>
+    
+</body>
+    
+</html>

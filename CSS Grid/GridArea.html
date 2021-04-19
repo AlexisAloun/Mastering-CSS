@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Use grid-area Without Creating an Areas Template</title>
+    <style>
+        /* If your grid doesn't have an areas template to reference, you can create an area on the fly for an item*/
+      .item1{
+            background:LightSkyBlue;
+            /*grid-area: horizontal line to start at / vertical line to start at / horizontal line to end at / vertical line to end at;*/
+            grid-area: 1/1/2/4; /*the item in the example will consume the rows between lines 1 and 2, and the columns between lines 1 and 4*/
+            }
+      .item2{background:LightSalmon;}
+      .item3{background:PaleTurquoise;}
+      .item4{background:LightPink;}
+      .item5 {
+            background: PaleGreen;
+            grid-area: 3/1/4/4; /*Using the grid-area property, the element with item5 class is placed between the third and fourth horizontal lines and between the first and fourth vertical lines.*/
+      }
+      .container {
+            font-size: 40px;
+            min-height: 300px;
+            width: 100%;
+            background: LightGray;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-gap: 10px;
+      }
+    </style>
+</head>
+<body>
+    <div class="container">
+      <div class="item1">1</div>
+      <div class="item2">2</div>
+      <div class="item3">3</div>
+      <div class="item4">4</div>
+      <div class="item5">5</div>
+    </div>
+</body>
+</html>

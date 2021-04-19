@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<!--The "absolute" position locks the element in place relative to its parent container(locked relative to its closest positioned ancestor). Unlike the "relative" position, this removes the element from the normal flow of the document, so surrounding items ignore it.
+
+If you forget to add a position rule to the parent item, (this is typically done using position: relative;), the browser will keep looking up the chain and ultimately default to the body tag. -->
+
+<html>
+
+<head>
+<title>Absolute Posistioning</title>
+<style>
+  #searchbar {
+    position:absolute;
+    top:50px;
+    right:50px;
+  }
+  section {
+    position: relative;
+  }
+</style>
+</head>
+
+<body>
+  <h1>Welcome!</h1>
+  <section>
+    <form id="searchbar">
+      <label for="search">Search:</label>
+      <input type="search" id="search" name="search">
+      <input type="submit" name="submit" value="Go!">
+    </form>
+  </section>
+</body>
+
+</html>

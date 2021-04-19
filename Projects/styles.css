@@ -1,0 +1,13 @@
+     h1 {
+         color: firebrick;
+        }
+     p {
+        font-size: 14pt;
+        font-family: Arial;
+        }
+     img {
+         float: right;
+         margin-left: 10px;
+         visibility: visible;
+         border: 1px black solid;
+         }

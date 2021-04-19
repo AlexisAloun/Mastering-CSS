@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<!-- Put crazy numbers in place. The best
+way to make art is to put the paint on the canvas in
+new and unexpected ways. Above all, have fun with
+this.
+1. The first part of the assignment is to create an
+HTML document with a photo on it and have the
+image rotate when you hover over it.
+2. Try out skew. Using the same HTML document
+add a second image and see exactly what
+happens when you skew the image. Skew
+takes one or two arguments. skew(xValue) or
+skew(xValue, yValue). Enter in the degrees you
+want it to skew. For example skew(15deg,
+15deg).
+Some Questions you can answer by trying:
+• Can you skew text? Try adding an h1 to the top of
+this document and try to skew it.
+• What if you skew an element without hover? Will it
+start skewed or never be affected?
+3. Another popular transform is translate.
+transform: translate(xValue, yValue);
+This moves an element sideways up or down. Add
+another image and add a hover to have the image
+move across the screen. What happens if you
+don’t add a transition time?. -->
+<html>
+    
+<head>
+ <title>Transitions</title>
+     <link href="reset.css" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Sansita+Swashed:wght@500;700&display=swap" rel="stylesheet">
+         <style> /*CSS*/
+             #container {
+                 font-family: 'Montserrat', sans-serif;
+                 background-color: #fafafa;
+             }
+             header, #thumbs, #transl {
+                 background-color: aliceblue;
+                 width: 96%;
+                 margin: 0 auto;
+                 box-shadow: 2px 2px #eee;
+                 text-align: center;
+             }
+             header p {
+                 color: blue;
+                 padding-top: 10px;
+                 margin-bottom: 10px;
+             }
+             header h1 {
+                 font-size: 3em;
+                 font-family: 'Sansita Swashed', cursive;
+                 transform: skew(-10deg);
+             }
+             header h2 {
+                 font-size: 2em;
+                 padding-bottom: 10px
+             }
+             #feature {
+                 text-align: center;
+             }
+             #feature img {
+                 width: 70%;
+                 margin-top: 20px;
+                 margin-bottom: 10px
+             }
+             #thumbs img {
+                 width: 25%;
+                 margin: 20px;
+                 opacity: 0.45;
+                 box-shadow: 2px 2px #ccc;
+             }
+             #transl img{
+                 width: 30%;
+                 margin: 20px;
+                 opacity: 0.45;
+                 box-shadow: 2px 2px #ccc;
+             }
+             #thumbs img:hover {
+                 opacity: 1.0;
+                 transition: opacity 1s;
+                 transition-delay: .25s;
+                 transform: rotate(3deg) scale(1.75, 1.75);
+             }
+             #transl img:hover {
+                 opacity: 1.0;
+                 transition: opacity 1s;
+                 transition-delay: .25s;
+                 transform: translate(10px, -20px) scale(1.25,1.25); 
+             }
+             .skew{
+                 transform: skew(20deg, -15deg);
+             }
+             @media only screen and (max-width: 728px){
+                 #thumbs img {
+                 width: 20%;
+                 margin: 15px;
+             }
+         </style>
+     <script> /*JavaScript*/
+         window.onload = function () {
+             const images = document.getElementsByTagName("img");
+   
+             for (var x = 1; x < images.length; x++) {
+                 images[x].addEventListener('click', function () {
+                     let loc = this.src;
+                     document.getElementById('featureImage').src=loc;
+                 });
+             }
+         }
+     </script>
+</head>
+    
+<body>
+ <div id="container">
+     <header>
+         <p>Exclusive Access</p>
+         <h1>Summer Shark Hype Fest</h1><br>
+         <h2>Cape Cod - Massachusetts</h2>
+         <h3>$50 VIP Pass </h3>
+     </header>
+     
+     <div id="feature">
+         <img id="featureImage" src="MainFun.jpg">
+     </div>
+     
+     <div id="thumbs">
+         <img src="" alt="">
+         <img class="skew" src="Fun1.jpg">
+         <img src="Fun2.jpg">
+         <img class="skew" src="Fun3.jpg">
+         <img src="Fun4.jpg">
+         <img src="Fun5.jpg">
+         <img src="Fun6.jpg">
+         <img class="skew" src="Fun7.jpg">
+         <img src="Fun8.jpg">
+         <img class="skew" src="Fun9.jpg">
+         <img src="Fun10.jpg">
+         <img src="Fun11.jpg">
+     </div>
+     
+     <div id="transl">
+        <img src="" alt="">
+        <img src="Fun12.jpg">
+        <img src="Fun13.jpg">
+     </div>
+     
+ </div>
+    
+</body>
+    
+</html>

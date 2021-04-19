@@ -1,0 +1,178 @@
+<!--Add styling to make an attractive, responsive design within the following guidelines:
+1. The articles should appear stacked with the
+image above the h2 above the p.
+2. The logoImage always appears at the top but is
+adjusted in size depending on the width of the
+screen.
+3. When the page is in tablet size, the
+articles are paired up creating two columns.
+4. When the page is in laptop size, the articles now
+will be four columns, and the footer is spread out
+across the bottom.-->
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initialscale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <link href="reset.css" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css2?family=Peddana&family=Poppins&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        #container, body {
+             margin: 0;
+             padding: 0;
+             padding-bottom: 50px;
+             font-family: 'Poppins', sans-serif;
+             background-color: lightgray;
+        }
+        header {
+             background-color: gray;
+             padding-top: 15px;
+             padding-bottom: 10px;
+             width: 100%;
+             border-bottom: 5px solid darkgreen;
+        }
+        h2 {
+         font-size: 2em;
+         margin-top: 3px;
+         color: white;
+         font-variant: small-caps;
+         font-family: 'Peddana', serif;
+         margin-bottom: 5px;
+     }
+     #stories{
+        padding-bottom: 15px;
+    }
+     .story {
+         margin: 10px;
+         border: 1px solid darkgreen;
+         border-radius: 5px;
+         padding: 5px;
+         box-shadow: 2px 2px lightgreen;
+         color:white;
+         background-color: green;
+     }
+     .story p {
+         margin-bottom: 5px;
+         font-family: 'Poppins', sans-serif;
+     }
+     footer {
+         text-align: center;
+         border-top: 1px solid #aaa;
+         bottom: 0px;
+         position: fixed;
+         width: 100%;
+         background-color: darkgreen;
+         color: white;
+         font-size: .75em;
+         margin-top: 10px;
+         padding: 5px;
+         text-decoration: underline;
+         line-height: 20px;
+     }
+     img {
+         width: 100%;
+     }
+                 @media screen and (min-width: 768px) {
+                     #container, body {
+                         padding-bottom: 500px;
+                     }
+                     #logoImage{
+                         height: 400px;
+                     }
+                     .story {
+                         width: 45%;
+                         float: left;
+                     }
+                     .story img {
+                         width: 50%;
+                         float: right;
+                         padding: 5px;
+                     }
+                 }
+             @media screen and (min-width: 1024px) {
+                 #container, body{
+                     padding-bottom: 25px;
+                 }
+                 #logoImage{
+                     height: 450px;
+                 }
+                 .story {
+                     width: 20%;
+                     float: left;
+                     line-height: 1.2em;
+                 }
+                 #stories {
+                     float: right;
+                     width: 90%;
+                 }
+                 footer {
+                     text-align: center;
+                     height: 12px;
+                     padding: 15px;
+                     bottom: -700px;
+                     position: absolute;
+                     height: 10px;
+                     margin-top: 10px;
+                     text-decoration: none;
+                 }
+                 li{
+                     display: inline;
+                     
+                 }
+            }
+    </style>
+</head>
+    
+<body>
+ <div id="container">
+     <header>
+     <img id="logoImage" src="http://placehold.it/300x200" alt="Logo">
+     </header>
+         <section id="stories">
+             <article class="story">
+             <img src="http://placebear.com/150/100">
+             <h2>Article #1</h2>
+                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing
+                elit. Accusamus, at! Ratione omnis perferendis excepturi? Commodi incidunt, numquam quod soluta sed quaerat non neque reprehenderit, beatae similique error ipsum, libero adipisci. Accusantium cumque aspernatur recusandae eum inhic fugiat, sunt maxime ab, sequi doloribus! Delectus quae sequi adipisci earum, facilis aliquam repudiandae tempore! Maxime officiis maiores unde voluptatem aperiam obcaecati mollitia! Ipsum dolores, optio nesciunt, nisi quo corporis neque
+                numquam, doloribus necessitatibus repellendus molestias? Nesciunt veritatis recusandae sed distinctio inventore, suntrerum eaque eveniet suscipit! Quod eos quasi sapiente repudiandae architecto.</p>
+             </article>
+             <article class="story">
+             <img src="http://placebear.com/150/100">
+             <h2>Article #2</h2>
+                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing
+                elit. Accusamus, at! Ratione omnis perferendis excepturi? Commodi incidunt, numquam quod soluta sed quaerat non neque reprehenderit, beatae similique error ipsum, libero adipisci. Accusantium cumque aspernatur recusandae eum inhic fugiat, sunt maxime ab, sequi doloribus! Delectus quae sequi adipisci earum, facilis aliquam repudiandae tempore! Maxime officiis maiores unde voluptatem aperiam obcaecati mollitia! Ipsum dolores, optio nesciunt, nisi quo corporis neque
+                numquam, doloribus necessitatibus repellendus molestias? Nesciunt veritatis recusandae sed distinctio inventore, suntrerum eaque eveniet suscipit! Quod eos quasi sapiente repudiandae architecto.</p>
+             </article>
+             <article class="story">
+             <img src="http://placebear.com/150/100">
+             <h2>Article #3</h2>
+                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing
+                elit. Accusamus, at! Ratione omnis perferendis excepturi? Commodi incidunt, numquam quod soluta sed quaerat non neque reprehenderit, beatae similique error ipsum, libero adipisci. Accusantium cumque aspernatur recusandae eum inhic fugiat, sunt maxime ab, sequi doloribus! Delectus quae sequi adipisci earum, facilis aliquam repudiandae tempore! Maxime officiis maiores unde voluptatem aperiam obcaecati mollitia! Ipsum dolores, optio nesciunt, nisi quo corporis neque
+                numquam, doloribus necessitatibus repellendus molestias? Nesciunt veritatis recusandae sed distinctio inventore, suntrerum eaque eveniet suscipit! Quod eos quasi sapiente repudiandae architecto.</p>
+             </article>
+             <article class="story">
+             <img src="http://placebear.com/150/100">
+             <h2>Article #4</h2>
+                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing
+                elit. Accusamus, at! Ratione omnis perferendis excepturi? Commodi incidunt, numquam quod soluta sed quaerat non neque reprehenderit, beatae similique error ipsum, libero adipisci. Accusantium cumque aspernatur recusandae eum inhic fugiat, sunt maxime ab, sequi doloribus! Delectus quae sequi adipisci earum, facilis aliquam repudiandae tempore! Maxime officiis maiores unde voluptatem aperiam obcaecati mollitia! Ipsum dolores, optio nesciunt, nisi quo corporis neque
+                numquam, doloribus necessitatibus repellendus molestias? Nesciunt veritatis recusandae sed distinctio inventore, suntrerum eaque eveniet suscipit! Quod eos quasi sapiente repudiandae architecto.</p>
+             </article>
+         </section>
+ <footer>
+     <ol>
+     <li>Facebook</li>
+     <li>Twitter</li>
+     <li>Snapchat</li>
+     <li>instagram</li>
+     <li>LinkedIn</li>
+     </ol>
+ </footer>
+ </div>
+</body>
+    
+</html>

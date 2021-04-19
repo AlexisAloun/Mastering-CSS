@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+
+<!-- because of potential browser compatibility issues, it's important to provide browser fallbacks to avoid potential problems -->
+
+<!-- improve browser compatibility by adding another background declaration right before the existing declaration and set its value to red -->
+
+<html>
+
+<head>
+<title> Improve Compatibility with Browser Fallbacks </title>
+<style>
+    /*:root is a pseudo-class selector that matches the root element of the document, usually the html element. By creating your variables in :root, they will be available globally and can be accessed from any other selector in the style sheet.*/
+  :root {
+    --red-color: red;
+  }
+  .red-box {
+    background: red;
+    background: var(--red-color);
+    height: 200px;
+    width:200px;
+  }
+</style>
+</head>
+
+<body>
+<div class="red-box"></div>
+</body>
+
+</html>

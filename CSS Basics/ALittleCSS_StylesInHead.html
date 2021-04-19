@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<!--A second, and perhaps superior location, for placing
+styles is the document head.
+Styles in the head of the document are placed inside
+a style element located in the document head.
+Let’s create our first style in the document head.
+Just after the title element-->
+<head>
+    <title>A Little CSS - Embbed Style</title>
+    <!--In this context h1 is called the selector and
+    indicates that the style rule will be applied to all h1
+    tags in the document. The rule, of course, will color
+    all the h1 elements firebrick red.-->
+     <style>
+         h1 {
+             color: firebrick;
+            }
+         p {
+            font-size: 14pt;
+            font-family: Arial;
+            }
+         img {
+             float: right;
+             margin-left: 10px;
+             visibility: visible;
+             border: 1px black solid;
+             }
+     </style>
+    <!--CSS rules can apply to non-text elements as well.
+    We set a style rule on our image, so the text flows
+    around it better. This rule will cause the image to float on the right
+    side of the text and create a 10-pixel gap between the
+    text and image, giving it some breathing space.-->
+</head>
+<body>
+     <h1>Norwalk, CT</h1>
+     <p><img src="norwalk.jpg">Norwalk is a U.S. city located
+    in southwestern Connecticut, in southern Fairfield County, on
+    the northern shore of Long Island Sound. Norwalk is included
+    statistically within both the New York metropolitan area as well
+    as the Bridgeport metropolitan area.<p>
+     <p>Norwalk was settled in 1649, and is now the sixth most
+    populous city in Connecticut. According to the 2010 United
+    States Census the city had a population of 85,603; with an
+    estimated population of 88,438 in 2016.</p>
+</body>
+</html>

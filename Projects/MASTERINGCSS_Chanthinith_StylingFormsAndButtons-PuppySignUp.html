@@ -1,0 +1,116 @@
+<!DOCTYPE HTML>
+<!--A local Canine school needs a new form for owners
+that want to sign up their puppies for training.
+They’ve asked you to assist in creating and styling
+the form. Make sure that your form is easily used by
+people on both mobile devices and full sized laptops.
+The need the form to include the following:
+• Owners name
+• Phone number
+• Email Address
+• Puppy’s name
+• Birthdate
+• breed
+• Checkboxes for Vaccinations of Parvo, Distemper,
+and Rabies
+• A select box to choose which way they heard of
+the school
+–Radio
+– Driving by
+– Friends/Neighbors-->
+
+<html>
+<head>
+    <title>Canine School</title>
+    <style>
+        h1{
+            background-color: rosybrown;
+            color:beige;
+            text-align: center;
+            padding: 10px;
+            margin-bottom: .5px;
+        }
+        #signup{
+            background-color:beige;
+            margin: auto;
+            padding: 5px;
+            border: 1px solid rosybrown;
+        }
+        form{
+            padding: 5px;
+            margin: auto;
+            text-align: left;
+            width: 95%;
+        }
+        [type="text"]{
+            width: 99%;
+            margin-right: 2px;
+        }
+        [type="tel"]{
+            width: 99%;
+            margin-right: 2px;
+        }
+        [type="email"]{
+            width: 99%;
+            margin-right: 2px;
+        }
+        input{
+            text-align: left;
+            height: 25px;
+            margin-bottom: 10px;
+            border: none;
+            color: rosybrown;
+        }
+        .vac{
+            align-content: left;
+        }
+        button{
+            background-color:rosybrown;
+            color: beige;
+            font-weight: bold;
+            font-size: 1.5em;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Puppy Training Sign-Up Form</h1>
+    <div id="signup">
+	<form action=”#” method=”post”>
+        <input type="text" id="FirstName" placeholder="Owner's First Name" name="FirstName"/>
+        <br/>
+        <input type="text" id="LastName" placeholder="Owner's Last Name" name="LastName"/>
+        <br/>
+        <input type="tel" id="phone" placeholder="Phone Number" name="phone"/>
+        <br/>
+        <input type="email" id="email" placeholder="Email Address" name="email"/>
+        <br/>
+        <input type="text" id="puppy" placeholder="Puppy's Name" name="puppy"/>
+        <br/>
+        <input type="text" id="breed" placeholder="Dog Breed" name="breed"/>
+        <br/><br>
+        
+        <label for="odob">Owner's Birthday</label><br>
+        <input type="date" id="odob" name="odob" /><br>
+        <label for="pdob">Puppy's Birthday</label><br>
+        <input type="date" id="pdob" name="pdob" /><br>
+
+        <p class="vac">Vaccinations<br>
+          <input type="checkbox" name="vac" value="par">Parvo<br/>       <input type="checkbox" name="vac" value="dis">Distemper<br/>
+          <input type="checkbox" name="vac" value="rab">Rabies<br/></p>
+        
+        <p>How have you heard of us?<br>
+            <select>
+            <option>Radio</option>
+            <option>Driving By</option>
+            <option>Friends / Neighbors</option>
+            </select></p>
+        
+        <button type=”submit” class="submit"> Submit </button>
+	</form>
+    </div>
+</body>
+</html>
